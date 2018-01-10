@@ -83,7 +83,7 @@ class MusicLibraryController
     input = gets.strip.to_i
     if (input > 0 && input <= (sorted_songs.size + 1))
       song_selected = sorted_songs.detect { |song| sorted_songs.index(song) == input - 1}
-      puts "Playing #{song.name} by #{song.artist.name}"
+      puts "Playing #{song_selected.name} by #{song_selected.artist.name}"
     end
   end
 
