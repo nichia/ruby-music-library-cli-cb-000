@@ -78,6 +78,14 @@ class MusicLibraryController
   end
 
   def play_song
+    puts "Which song number would you like to play?"
+    sorted_songs = Song.all.sort_by { |song| song.name}
+    input = gets.strip.to_i
+    if input > 0 && <= (sorted_songs.size + 1)
+      song_selected = sorted_songs.detect { |song| sorted_songs.index(song) == iput - 1}
+      puts "Playing #{song.name} by #{song.artist.name}"
+    end
+    puts "Which song number would you like to play?"
   end
 
 end #-- MusicLibraryController --
