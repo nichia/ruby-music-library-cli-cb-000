@@ -85,7 +85,6 @@ class MusicLibraryController
       song_selected = sorted_songs.detect { |song| sorted_songs.index(song) == iput - 1}
       puts "Playing #{song.name} by #{song.artist.name}"
     end
-    puts "Which song number would you like to play?"
   end
 
 end #-- MusicLibraryController --
